@@ -19,10 +19,10 @@ const app = express();
 require("./config")(app);
 
 // default value for title local
-const capitalize = require("./utils/capitalize");
+/* const capitalize = require("./utils/capitalize");
 const projectName = "topnotchhomepages";
 
-app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
+app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`; */
 
 // Configure session
 const session = require("express-session")
