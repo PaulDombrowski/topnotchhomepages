@@ -2,16 +2,16 @@ const express = require('express');
 const router = express.Router();
 
 /* GET home page */
+
+router.get("/overview", (req, res, next) => {
+  res.render("overview");
+});
+
 router.get("/", (req, res, next) => {
-  res.render("index");
+  res.render("index", { style: "stylesheet-provehumanbeing.css "});
 });
 
-router.get("/provehumanbeing", (req, res, next) => {
-  res.render("provehumanbeing", { style: "stylesheet-provehumanbeing.css "});
-});
 
-router.get("/provehumanbeing", (req, res, next) => {
-  res.render("provehumanbeing", { style: "stylesheet-provehumanbeing.css "});
-});
+
 
 module.exports = router;
