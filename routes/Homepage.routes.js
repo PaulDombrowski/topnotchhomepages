@@ -12,7 +12,7 @@ router.get("/add", (req, res, next) => {
 router.get("/overview", (req, res, next) => {
     Homepages.find()
       .then(homepages => {
-        res.render("recipes/all", { homepages })
+        res.render("overview", { homepages })
       })
       .catch(err => next(err))
   })
