@@ -46,8 +46,8 @@ const indexRoutes = require("./routes/index.routes");
 app.use("/", indexRoutes);
 
 
-// const homepageRoutes =  require("./routes/Homepage.routes"); 
-// app.use("/", homepageRoutes)
+const homepageRoutes =  require("./routes/Homepage.routes"); 
+app.use("/", homepageRoutes);
 
 const auth = require("./routes/auth")
 app.use("/", auth);
@@ -57,3 +57,6 @@ app.use("/", auth);
 require("./error-handling")(app);
 
 module.exports = app;
+
+
+
