@@ -81,7 +81,7 @@ router.get("/auth/login", (req, res, next) => {
   router.get("/auth/logout", (req, res, next) => {
     // Logout user
     req.session.destroy()
-    res.redirect("/overview")
+    res.redirect("/")
   })
   
   module.exports = router

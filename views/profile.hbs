@@ -1,15 +1,61 @@
-<h1>Hello {{user.username}}</h1>
 
-<h2>Websites I have saved:</h2>
+<nav class="NavOne">
+<ul>
+  <li><a href="/overview">Overview</a></li>
+  <li><a href="/auth/logout">Logout</a></li>
+</ul>
+</nav>
 
-<form action="/add" method="POST">
+<h1>Hello {{user.username}}!</h1>
+
+{{!-- Here is where the results of the form will display --}}
+
+{{!-- {{#if message}}
+	<h3 class="error">{{message}}</h3>
+
+    {{#each recipes}}
+	<div>
+		<h2>Title: {{name}}</h2>
+		<h2>Review: {{price}}</h2>
+		<h2>Category: {{owner.username}}</h2>
+		<a href="/rooms/{{_id}}/delete">Delete this room ❌</a>
+	</div>
+
+<a href="/recipes/{{_id}}">{{title}}</a>
+
+{{/each}}
+
+{{/if}} --}}
+
+<h2>Use the form below to add a cool website to the collection:</h2>
+
+<div class ="addForm">
+<form action="/profile" method="POST" enctype="multipart/form-data">
   <label for="title">Title:</label>
   <input type="text" name="title">
 
+
   <label for="review">Review:</label>
-  <textarea name="review"></textarea>
+  <input type="text" name="review">
 
-  <button type="submit">Add a Homepage</button>
+  <label for="url" placeholder="has to start with `http` or `https`">Website Url:</label>
+  <input type="text" name="url">
+
+<label for="categories">Category</label>
+<select name="categories" id="category-cropdown">
+  <option value="" disabled selected hidden>Choose a category</option>
+  <option value="sexy">sexy</option>
+  <option value="weird">weird</option>
+  <option value="true">true</option>
+  <option value="funny">funny</option>
+</select>
+
+  <label for="img">Upload a screenshot that represents the page the most:</label>
+  <input type="file" id="img" name="FirstImage" accept="image/*">
+
+  <label for="img">Upload another screenshot:</label>
+  <input type="file" id="img" name="img" accept="image/*">
+
+  <button type="submit">SUBMIT</button>
 </form>
-
-<a href="/auth/logout">Logout</a>
+</div>

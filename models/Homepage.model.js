@@ -17,6 +17,14 @@ const homepageSchema = new Schema(
         type: String,
     },
 
+    imagePath: {
+      type: String,
+    },
+
+    owner: {
+      type: String
+    },
+
     comments: [
       {
         type: Schema.Types.ObjectId,
