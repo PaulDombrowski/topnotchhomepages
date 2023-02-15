@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 router.get("/", (req, res, next) => {
-  res.render("index", { style: "stylesheet-provehumanbeing.css "});
+  res.render("index", { style: "stylesheet-provehumanbeing.css ", layout: "ExtraLayoutFürIndex.hbs" });
 });
 
 
