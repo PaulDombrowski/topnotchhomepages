@@ -13,6 +13,10 @@ const homepageSchema = new Schema(
     categories: {
         type: String
     }, 
+    url: {
+        type: String,
+    },
+
     comments: [
       {
         type: Schema.Types.ObjectId,
