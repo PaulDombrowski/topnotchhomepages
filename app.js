@@ -45,12 +45,15 @@ app.use(
 const indexRoutes = require("./routes/index.routes");
 app.use("/", indexRoutes);
 
-
 const homepageRoutes =  require("./routes/Homepage.routes"); 
 app.use("/", homepageRoutes);
 
 const auth = require("./routes/auth")
 app.use("/", auth);
+
+const profileRoutes = require("./routes/Profile.routes")
+app.use("/", profileRoutes);
+
 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
