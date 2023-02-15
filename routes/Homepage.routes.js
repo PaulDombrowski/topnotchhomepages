@@ -10,8 +10,14 @@ router.get("/add", (req, res, next) => {
 
 
 router.get("/overview", (req, res, next) => {
-    Homepages.find()
+    const query = {}
+    form = req.query.category
+
+    console.log("query is:", form)
+
+    Homepages.find( )
       .then(homepages => {
+        console.log(homepages);
         res.render("overview", { homepages })
       })
       .catch(err => next(err))
@@ -19,13 +25,24 @@ router.get("/overview", (req, res, next) => {
 
 router.post("/add", (req, res, next) => {
   
-    const { title, review } = req.body
+    const { title, review, categories, url } = req.body
     
-    Homepages.create({ title, review })
+    Homepages.create({ title, review, categories, url })
       .then(createdHomepage => {
         res.redirect("/overview")
       })
       .catch(err => next(err))
   });
+
+  router.get("/homepages/:id", (req, res, next) => {
+    const id = req.params.id
+  
+    Homepages.findById(id)
+      .populate("comments")
+      .then(homepageDetail => {
+        res.render("detailsview", { homepageDetail })
+      })
+      .catch(err => next(err))
+  })
 
   module.exports = router;
