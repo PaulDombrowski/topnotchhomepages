@@ -15,6 +15,75 @@ h1 {
 
 
 
+
 /* navbar & header */
 
+
+
+/* Profile Styling Here */
+
+.NavOne ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.NavOne li {
+  float: left;
+}
+
+.NavOne li a {
+  display: block;
+  color: rgba(77,255,202,1);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.NavOne li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.addForm input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.addForm input[type=file], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.addForm button {
+  width: 100%;
+  background-color: rgba(242,161,244,1);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addForm button:hover {
+  background-color: rgba(77,255,202,1);
+}
+
+.addForm div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
 
