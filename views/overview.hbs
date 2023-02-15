@@ -1,4 +1,4 @@
-
+{{!-- 
 <!--Basic Navbar -->
 
 <nav class="NavOne">
@@ -36,7 +36,8 @@
     <img src="\images\Peach.png" alt="Placeholder" width="600" height="400">
   </a>
   <div class="desc">Research Resources</div>
-</div>
+</div> --}}
+
 
 <h1>Top Notch Homepages</h1>
 
@@ -54,13 +55,16 @@
 
 
 <div>
-<form method="post" action="/overview">
+<form method="GET" action="/overview">
   <label for="category">Wählen Sie eine Kategorie:</label>
   <select name="category" onchange="this.form.submit()">
-    <option value="sexy">sexy</option>
-    <option value="weird">weird</option>
-    <option value="true">true</option>
-    <option value="funny">funny</option>
+   <option value=""></option>
+  <option value="edgy">edgy and playful</option>
+  <option value="attractive">attractive and appealing</option>
+  <option value="cool">cool, but useless</option>
+  <option value="educational">educational or informative</option>
+  <option value="empowering">empowering</option>
+  <option value="minimal">minimal</option>
   </select>
 </form>
 </div>

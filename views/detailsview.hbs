@@ -6,6 +6,36 @@
         <img src="" alt="">
         <h1> {{homepageDetail.title}}</h1>
         <h1> {{homepageDetail.review}}</h1>
-        <a href="{{homepageDetail.url}}" class="button">Get to the page</a>
-        
+        <h1>  Category: {{homepageDetail.categories}}  </h1>
+        <a href="{{homepageDetail.url}}" class="button">Get to the page</a>        
 </div>
+
+
+
+<div>
+
+    <h1>Comments:</h1>
+    <div>
+        {{#each homepageDetail.comments}}
+        <p>User: {{user}}</p>
+        <p>Comments: {{comment}}</p>
+        {{/each}}
+
+    </div>
+    
+
+
+
+</div>
+
+<div> 
+     <h2>Add a comment</h2>
+  <form action="/homepages/{{homepageDetail._id}}" method="POST">
+    <label for="user">User:</label>
+    <input type="text" name="user">
+
+    <label for="comment">Comment:</label>
+    <input type="text" name="comment">
+
+    <button type="submit">Add comment</button>
+  </form>
