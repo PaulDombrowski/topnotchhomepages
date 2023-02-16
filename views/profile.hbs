@@ -10,24 +10,19 @@
 
 {{!-- Here is where the results of the form will display --}}
 
-{{!-- {{#if message}}
-	<h3 class="error">{{message}}</h3>
-
-    {{#each recipes}}
-	<div>
-		<h2>Title: {{name}}</h2>
-		<h2>Review: {{price}}</h2>
-		<h2>Category: {{owner.username}}</h2>
-		<a href="/rooms/{{_id}}/delete">Delete this room ❌</a>
-	</div>
-
-<a href="/recipes/{{_id}}">{{title}}</a>
-
-{{/each}}
-
-{{/if}} --}}
-
-<h2>Use the form below to add a cool website to the collection:</h2>
+{{#if homepages}}
+  {{#each homepages}}
+  <div class="results">
+    <h4>Title: {{title}}</h4>
+    <h4>Review: {{review}}</h4>
+    <h4>Category: {{categories}}</h4>
+    <h4>Url: {{url}}</h4>
+    <a href="/delete/{{_id}}">Delete this contribution❌</a>
+    </div>
+  {{/each}}
+{{else}}
+  <h3>No contributions yet. Submit a website using the form below to start.</h3>
+{{/if}}
 
 <div class ="addForm">
 <form action="/profile" method="POST" enctype="multipart/form-data">
@@ -38,23 +33,25 @@
   <label for="review">Review:</label>
   <input type="text" name="review">
 
-  <label for="url" placeholder="has to start with `http` or `https`">Website Url:</label>
-  <input type="text" name="url">
+  <label for="url">Website Url:</label>
+  <input type="text" name="url" placeholder="has to start with `http` or `https`">
 
 <label for="categories">Category</label>
 <select name="categories" id="category-cropdown">
   <option value="" disabled selected hidden>Choose a category</option>
-  <option value="sexy">sexy</option>
-  <option value="weird">weird</option>
-  <option value="true">true</option>
-  <option value="funny">funny</option>
+  <option value="edgy">edgy and playful</option>
+  <option value="attractive">attractive and appealing</option>
+  <option value="cool">cool, but useless</option>
+  <option value="educational">educational or informative</option>
+  <option value="empowering">empowering</option>
+  <option value="minimal">minimal</option>
 </select>
 
   <label for="img">Upload a screenshot that represents the page the most:</label>
   <input type="file" id="img" name="FirstImage" accept="image/*">
 
-  <label for="img">Upload another screenshot:</label>
-  <input type="file" id="img" name="img" accept="image/*">
+{{!--   <label for="img">Upload another screenshot:</label>
+  <input type="file" id="img" name="img" accept="image/*"> --}}
 
   <button type="submit">SUBMIT</button>
 </form>

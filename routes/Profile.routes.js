@@ -8,8 +8,13 @@ router.get('/profile', (req, res, next) => {
 	const user = req.session.user
 	console.log(user);
 
-
-	res.render('profile', {user: user})
+Homepages.find({owner: user._id})
+.then(homepagesFromTheUser=> {
+	res.render('profile', {user: user, homepages: homepagesFromTheUser},)
+})
+.catch(err => {
+	next(err)
+})
 });
 
 router.post('/profile', uploader.single("FirstImage"),(req, res, next) => {
@@ -18,13 +23,20 @@ router.post('/profile', uploader.single("FirstImage"),(req, res, next) => {
 	const userId = req.session.user._id
 	Homepages.create({title, review, categories, url, owner: userId, imagePath })
 		.then(createdHomepages=> {
-			res.render('/profile', {})
+			res.redirect('/profile')
 		})
 		.catch(err => {
 			next(err)
 		})
 });
 
+router.get("/delete/:id", (req, res, next) => {
+	Homepages.findByIdAndDelete(req.params.id)
+		.then(() => {
+			res.redirect('/profile')
+		})
+		.catch(err => next(err))
+})
 
 
 module.exports = router;
