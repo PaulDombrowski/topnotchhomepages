@@ -87,3 +87,21 @@ h1 {
   padding: 20px;
 }
 
+.addForm ::placeholder {
+  color:rgba(77,255,202,1);
+}
+
+.results {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  padding: 15px;
+  text-align: center;
+}
+
+div.results:hover {
+  border: 1px solid #777;
+  background-color: rgba(242,161,244,1);
+}
+
