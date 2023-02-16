@@ -1,41 +1,36 @@
 
-<div class="HompagesList">
-    <h1>Detail</h1>
-   
-        <img src="{{homepageDetail.imagePath}}" alt="">
+<div class="detailview-container">
+<div class="Detailview">
+     
+        <img class="detailsview-image" src="{{homepageDetail.imagePath}}" alt="">
         <img src="" alt="">
         <h1> {{homepageDetail.title}}</h1>
-        <h1> {{homepageDetail.review}}</h1>
-        <h1>  Category: {{homepageDetail.categories}}  </h1>
-        <a href="{{homepageDetail.url}}" class="button">Get to the page</a>        
-</div>
-
-
-
-<div>
-
-    <h1>Comments:</h1>
-    <div>
+        <h2> Description: {{homepageDetail.review}}</h2>
+        <h2> Category: {{homepageDetail.categories}}  </h2>
+        <a class="neon-btn" href="{{homepageDetail.url}}" target="_blank" class="button">Get to the page</a>  
+        <hr class="schere">
+        <div class="comments">
         {{#each homepageDetail.comments}}
-        <p>User: {{user}}</p>
-        <p>Comments: {{comment}}</p>
+        <span class="neon-btn"> {{user}} says:</span>
+        <span>{{comment}}</span>
+        </div> 
+        
         {{/each}}
 
-    </div>
+</div>
+</div>
+ 
     
 
-
-
-</div>
-
-<div> 
-     <h2>Add a comment</h2>
+<div class="makeComment"> 
+     <h2>What do you think?</h2>
   <form action="/homepages/{{homepageDetail._id}}" method="POST">
-    <label for="user">User:</label>
+    <label for="user">Your name:</label>
     <input type="text" name="user">
 
-    <label for="comment">Comment:</label>
+    <label for="comment">Your thougts</label>
     <input type="text" name="comment">
 
-    <button type="submit">Add comment</button>
+    <button class="neon-btn" type="submit">Thanks for sharing</button>
   </form>
+</div>

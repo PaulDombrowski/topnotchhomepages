@@ -1,25 +1,11 @@
 
-
+<div><a class="neon-btn" href="/auth/logout">Log-Out</a></div>
 
 <h1>Hello {{user.username}}!</h1>
 
 {{!-- Here is where the results of the form will display --}}
 
 
-
-{{#if homepages}}
-  {{#each homepages}}
-  <div class="results">
-    <h4>Title: {{title}}</h4>
-    <h4>Review: {{review}}</h4>
-    <h4>Category: {{categories}}</h4>
-    <h4>Url: {{url}}</h4>
-    <a href="/delete/{{_id}}">Delete this contribution❌</a>
-    </div>
-  {{/each}}
-{{else}}
-  <h3>No contributions yet. Submit a website using the form below to start.</h3>
-{{/if}}
 
 
 <div class ="addForm">
@@ -54,3 +40,20 @@
   <button type="submit">SUBMIT</button>
 </form>
 </div>
+
+
+<div class="homepage-collection">
+
+{{#if homepages}}
+  {{#each homepages}}
+  <div class="homepage-item">
+    <img class="homepage-image" src="{{imagePath}}" alt="">
+    <h4 class="homepage-title">Title: {{title}}</h4>
+    <a class="neon-btn" href="/delete/{{_id}}">Delete</a>
+    </div>
+  {{/each}}
+{{else}}
+  <h3>No contributions yet. Submit a website using the form below to start.</h3>
+{{/if}}
+</div>
+
