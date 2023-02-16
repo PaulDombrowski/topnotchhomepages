@@ -1,4 +1,7 @@
-body {
+
+
+
+.renderdbody {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -11,16 +14,139 @@ h1 {
   color: 15px;
 }
 
+body {
+ background-color: aquamarine;
+}
 
 
 
 
 
-/* navbar & header */
+/* complete header */
+
+/*->navbar*/
+/* Navbar */
+.navbar {
+  background-color: #ffff00;
+  font-family: 'Obitron', sans-serif;
+  font-size: 1.2em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  transition: background-color 0.3s ease-in-out;
+  position: fixed;
+  z-index: 1;
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar-item {
+  float: right;
+}
+
+.navbar-link {
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.navbar-link:hover {
+  background-color: #ffff00;
+}
+
+.navbar:hover {
+  background-color: rgb(243, 140, 252);
+}
+
+/* Ticker with hearts */
+.ticker-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: transparent;
+  height: 30px;
+  width: 100%;
+}
+
+.ticker-text {
+  margin: 0;
+  padding-left: 100%;
+  white-space: nowrap;
+  animation: ticker-animation 60s linear infinite;
+}
+
+@keyframes ticker-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* flexbox für die einzelnen homepages */
+
+/* Container-Element */
+.homepage-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* Homepage-Element */
+.homepage-item {
+  border: #00b7ff;
+  position: relative;
+  margin: 5vw;
+  min-width: 400px;
+  flex-basis: calc(33.33% - 20px);
+  height: 300px;
+  margin-bottom: 20px;
+  background-color: rgba(128, 128, 128, 0.2);
+  transition: transform 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+
+}
+
+/* Bild innerhalb des Homepage-Elements */
+.homepage-image {
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Titel innerhalb des Homepage-Elements */
+.homepage-title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Hover-Übergang */
+.homepage-item:hover {
+  transform: scale(1.1);
+  background-color: rgba(128, 128, 128, 0.7);
+  
+}
 
 
 
-/* Profile Styling Here */
+
+
+/* Profile Styling*/
 
 .NavOne ul {
   list-style-type: none;
