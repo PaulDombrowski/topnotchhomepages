@@ -3,8 +3,7 @@ const { isLoggedIn } = require("../middleware/route-guard.js");
 const Homepages = require('../models/Homepage.model.js')
 const { uploader, cloudinary } = require("../config/cloudinary.config.js")
 
-
-router.get('/profile', (req, res, next) => {
+router.get('/profile', isLoggedIn, (req, res, next) => {
 	const user = req.session.user
 	console.log(user);
 
