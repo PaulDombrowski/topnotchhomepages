@@ -1,14 +1,11 @@
 
-<nav class="NavOne">
-<ul>
-  <li><a href="/overview">Overview</a></li>
-  <li><a href="/auth/logout">Logout</a></li>
-</ul>
-</nav>
+
 
 <h1>Hello {{user.username}}!</h1>
 
 {{!-- Here is where the results of the form will display --}}
+
+
 
 {{#if homepages}}
   {{#each homepages}}
@@ -23,6 +20,7 @@
 {{else}}
   <h3>No contributions yet. Submit a website using the form below to start.</h3>
 {{/if}}
+
 
 <div class ="addForm">
 <form action="/profile" method="POST" enctype="multipart/form-data">

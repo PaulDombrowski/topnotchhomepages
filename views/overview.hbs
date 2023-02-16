@@ -42,7 +42,7 @@
 <h1>Top Notch Homepages</h1>
 
 
-<div  class="HompagesList">
+{{!-- <div  class="HompagesList">
     <h1>All Homepages</h1>
     {{#each homepages}}
         <img src="" alt="">
@@ -50,7 +50,7 @@
         <a href="/homepages/{{_id}}" class="button">See details </a>
     {{/each}}
 
-</div>
+</div> --}}
 
 
 
@@ -68,3 +68,37 @@
   </select>
 </form>
 </div>
+
+
+
+
+{{!-- <div class="homepage-collection">
+  <div class="homepage-row">
+     {{#each homepages}}
+    <div class="homepage-box">
+        <img src="{{imagePath}}">
+        <h1>Titel: {{title}}</h1>
+        <a href="/homepages/{{_id}}" class="button">See details </a>
+    {{/each}}
+    </div>
+  </div>
+</div> --}}
+
+
+
+
+<div class="homepage-collection">
+
+ {{#each homepages}}
+ <a href="homepages/{{_id}}">
+ <button class ="homepage-item"> 
+    <img class="homepage-image" src="{{imagePath}}" alt="homepage image">
+    <h3 class="homepage-title">{{title}}</h3>
+</button>
+</a>
+
+   {{/each}}
+</div>
+
+
+    

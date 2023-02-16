@@ -10,15 +10,46 @@
       <link rel="stylesheet" href="/stylesheets/{{style}}"/>
    </head>
 
-   {{!-- header with navbar  --}}
-
+  
 
 
    <body>
 
+   {{!-- header with navbar  --}}
 
+ 
+<nav class="navbar">
+   <div class="ticker-container">
+  <p class="ticker-text">&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;// &#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;//
+   &#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;// &#10084; &#10084; &#10084;&#10084; &#10084; &#10084;
+   &#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;
+   &#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;
+   &#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;
+   &#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;
+   &#10084; &#10084; &#10084;&#10084; &#10084; &#10084;&#10084; &#10084; &#10084;
+  </p>
+</div>
+
+  <ul class="navbar-list">
+   
+    <li class="navbar-item"><a href="/auth/login" class="navbar-link">Log In</a></li>
+    <li class="navbar-item"><a href="/auth/signup" class="navbar-link">Sign Up</a></li>
+    <li class="navbar-item"><a href="/profile" class="navbar-link">Profile</a></li>
+      <li class="navbar-item"><a href="/overview" class="navbar-link">Home</a></li>
+  </ul>
+</nav>
+
+
+<div class="black-bar">
+  <div class="neon-ticker">
+    <marquee behavior="scroll" direction="left" scrollamount="5">Live Ticker</marquee>
+  </div>
+</div>
+
+
+<div class="renderdbody">
       {{{body}}}
-
+</div>
       <script src="/js/script.js"></script>
    </body>
 
