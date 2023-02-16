@@ -54,8 +54,8 @@
 
 
 
-<div>
-<form method="GET" action="/overview">
+{{!-- <div>
+<form method="GET" action="/overview" class="dropdown">
   <label for="category">Wählen Sie eine Kategorie:</label>
   <select name="category" onchange="this.form.submit()">
    <option value=""></option>
@@ -67,22 +67,26 @@
   <option value="minimal">minimal</option>
   </select>
 </form>
+</div> --}}
+
+
+<div class="dropdown-container">
+  <form method="GET" action="/overview" class="dropdown">
+    <label for="category">Wählen Sie eine Kategorie:</label>
+    <select name="category" onchange="this.form.submit()">
+      <option value=""></option>
+      <option value="edgy">edgy and playful</option>
+      <option value="attractive">attractive and appealing</option>
+      <option value="cool">cool, but useless</option>
+      <option value="educational">educational or informative</option>
+      <option value="empowering">empowering</option>
+      <option value="minimal">minimal</option>
+    </select>
+  </form>
 </div>
 
 
 
-
-{{!-- <div class="homepage-collection">
-  <div class="homepage-row">
-     {{#each homepages}}
-    <div class="homepage-box">
-        <img src="{{imagePath}}">
-        <h1>Titel: {{title}}</h1>
-        <a href="/homepages/{{_id}}" class="button">See details </a>
-    {{/each}}
-    </div>
-  </div>
-</div> --}}
 
 
 
