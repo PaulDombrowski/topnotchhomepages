@@ -9,28 +9,31 @@
         <h2> Category: {{homepageDetail.categories}}  </h2>
         <a class="neon-btn" href="{{homepageDetail.url}}" target="_blank" class="button">Get to the page</a>  
         <hr class="schere">
-        <div class="comments">
+
+      <div class="makeComment"> 
+      <h3>What do you think?</h3>
+      <form id="formdefault" action="/homepages/{{homepageDetail._id}}" method="POST">
+      <label for="user">Your name:</label>
+      <input id="inputfield" type="text" name="user">
+
+      <label for="comment">Your thougts</label>
+      <input id="inputfield" type="text" name="comment">
+      <button class="neon-btn" type="submit">Thanks for sharing</button>
+  </form>
+</div>
+
+</div>
+
+  
         {{#each homepageDetail.comments}}
-        <span class="neon-btn"> {{user}} says:</span>
+        <div class="comments">
+        <img class="comment-image" src="https://cdn.icon-icons.com/icons2/1518/PNG/512/commentmono_105952.png" alt="">
+        <span id="comment-content" class="neon-btn"> {{user}} says:</span>
         <span>{{comment}}</span>
         </div> 
         
         {{/each}}
 
 </div>
-</div>
  
     
-
-<div class="makeComment"> 
-     <h2>What do you think?</h2>
-  <form action="/homepages/{{homepageDetail._id}}" method="POST">
-    <label for="user">Your name:</label>
-    <input type="text" name="user">
-
-    <label for="comment">Your thougts</label>
-    <input type="text" name="comment">
-
-    <button class="neon-btn" type="submit">Thanks for sharing</button>
-  </form>
-</div>

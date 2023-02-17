@@ -214,7 +214,7 @@ body {
 
 .NavOne li a {
   display: block;
-  color: rgba(77,255,202,1);
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -266,7 +266,7 @@ body {
 }
 
 .addForm ::placeholder {
-  color:rgba(77,255,202,1);
+  color:rgb(0, 0, 0);
 }
 
 .results {
@@ -313,18 +313,61 @@ background-color: rgba(255, 255, 255, 0.7);
 .detailsview-image {
   width: 65%; 
   height: auto;
-  margin-bottom: 2vw;
+  margin-bottom: 4vw;
   
 }
 
 .comments {
   margin-top: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-width: 40px;
+  padding: 60px; 
+  
+
   
 }
 
-.makeComments {
+#comment-content {
+  margin: 20px; 
+}
+
+.makeComment {
+  margin-top: 10vh;
+  align-items: center;
   display: flex; 
+  align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+}
+
+.comment-image {
+  max-width: 40px;
+}
+
+#formdefault {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0;
+  
+}
+
+form * {
+  margin: 10px 0;
+}
+
+
+/* input field */
+
+#inputfield {
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 5px;
+  transition: background-color 0.3s ease;
 }
 
 /* buttons  */
