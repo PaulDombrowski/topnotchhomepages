@@ -5,6 +5,7 @@
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: transparent;
+  margin-top: 4vw;
 }
 
 a {
@@ -69,6 +70,7 @@ body {
   background-color:  #ffff00;
 }
 
+
 /* Ticker with hearts */
 .ticker-container {
   display: flex;
@@ -84,7 +86,7 @@ body {
   margin: 0;
   padding-left: 100%;
   white-space: nowrap;
-  animation: ticker-animation 60s linear infinite;
+  animation: ticker-animation 80s linear infinite;
 }
 
 @keyframes ticker-animation {
@@ -96,9 +98,51 @@ body {
   }
 }
 
+/* ticker crazy cool websites  */
+
+
+/* Transparenter Balken */
+.neon-bar {
+	background-color: transparent;
+	height: 50px;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Neon-Text */
+.neon-text {
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	color:  #ffff00;
+	white-space: nowrap;
+	animation: neon 30s linear infinite;
+}
+
+/* Animations-Regel */
+@keyframes neon {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 100%;
+	}
+}
+
+
 /* dropdown menu - categories for overview */ 
-
-
+.dropdown-container {
+ border-radius: 3px;
+ border-width: 6px;
+ border-color: #ffff00;
+}
 
 /* flexbox für die einzelnen homepages */
 
@@ -125,6 +169,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1vw;
+  border-radius: 4px; 
 
 }
 
@@ -133,6 +178,7 @@ body {
   display: block;
   max-width: 80%;
   max-height: 80%;
+  border-radius: 4px; 
 }
 
 /* Titel innerhalb des Homepage-Elements */
@@ -168,7 +214,7 @@ body {
 
 .NavOne li a {
   display: block;
-  color: rgba(77,255,202,1);
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -220,7 +266,7 @@ body {
 }
 
 .addForm ::placeholder {
-  color:rgba(77,255,202,1);
+  color:rgb(0, 0, 0);
 }
 
 .results {
@@ -236,4 +282,113 @@ div.results:hover {
   border: 1px solid #777;
   background-color: rgba(242,161,244,1);
 }
+
+
+
+/* detailview */
+.detailview-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Detailview {
+  position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(128, 128, 128, 0.2);
+  transition: transform 0.4s ease-in-out;
+  padding: 7vw;
+  max-width: 35vw;
+  
+ 
+}
+
+.Detailview:hover {
+  transform: scale(1.1);
+background-color: rgba(255, 255, 255, 0.7);
+}
+
+.detailsview-image {
+  width: 65%; 
+  height: auto;
+  margin-bottom: 4vw;
+  
+}
+
+.comments {
+  margin-top: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  min-width: 40px;
+  padding: 60px; 
+  
+
+  
+}
+
+#comment-content {
+  margin: 20px; 
+}
+
+.makeComment {
+  margin-top: 10vh;
+  align-items: center;
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.comment-image {
+  max-width: 40px;
+}
+
+#formdefault {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px 0;
+  
+}
+
+form * {
+  margin: 10px 0;
+}
+
+
+/* input field */
+
+#inputfield {
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* buttons  */
+
+.neon-btn {
+  background-color: #ffff00; /* Hintergrundfarbe in neongelb */
+  color: rgb(243, 140, 252); /* Schriftfarbe in lila */
+  border-radius: 10px; /* abgerundete Ecken */
+  padding: 10px 20px; /* Innenabstand oben und unten, links und rechts */
+  border: none; /* keine Rahmenlinie */
+  text-transform: uppercase; /* Großbuchstaben */
+  font-weight: bold; /* fett gedruckt */
+  
+  transition: all 0.3s ease; /* sanfter Übergang der Farben */
+}
+
+.neon-btn:hover {
+  background-color: rgb(243, 140, 252); /* Hintergrundfarbe in lila */
+  color: #ffff00; /* Schriftfarbe in neongelb */
+  
+}
+
+
 

@@ -18,7 +18,13 @@ Homepages.find({owner: user._id})
 
 router.post('/profile', uploader.single("FirstImage"),(req, res, next) => {
 	const { title, review, categories, url } = req.body
-	const imagePath = req.file.path
+	let imagePath 
+	if (!req.file) {
+		imagePath = "https://uploads-ssl.webflow.com/5a9423a3f702750001758d4f/628abc8aa920a93e11b92ac4_shades-of-gray-color.png"
+	} else {
+		imagePath = req.file.path
+	}
+	
 	const userId = req.session.user._id
 	Homepages.create({title, review, categories, url, owner: userId, imagePath })
 		.then(createdHomepages=> {

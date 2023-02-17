@@ -39,7 +39,7 @@
 </div> --}}
 
 
-<h1>Top Notch Homepages</h1>
+
 
 
 {{!-- <div  class="HompagesList">
@@ -68,13 +68,20 @@
   </select>
 </form>
 </div> --}}
-
+<div class="neon-bar">
+		<span class="neon-text">crazy cool websites &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            crazy cool websites &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;crazy cool websites &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            crazy cool websites &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            crazy cool websites &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            crazy cool websites &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        </span>
+	</div>
 
 <div class="dropdown-container">
   <form method="GET" action="/overview" class="dropdown">
-    <label for="category">Wählen Sie eine Kategorie:</label>
+    <label for="category"></label>
     <select name="category" onchange="this.form.submit()">
-      <option value=""></option>
+    <option value="" disabled selected hidden>Choose a category</option>
       <option value="edgy">edgy and playful</option>
       <option value="attractive">attractive and appealing</option>
       <option value="cool">cool, but useless</option>
